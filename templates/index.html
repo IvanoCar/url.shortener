@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smally URL shortener</title>
+
+    <style>
+        #msg {
+            margin-left: auto;
+            margin-right: auto;
+            color: blue;
+        }
+        table {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        td {
+            text-align: center;
+        }
+        tr {
+            text-align: center;
+        }
+
+        .container {
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <table>
+        <tr><td><h1>Short my URL</h1></td></tr>
+            <tr>
+                <td>
+                    <form action="/add/new" method="POST">
+                        <input type="text" name="id" placeholder="Insert ID"><br>
+                        <input type="text" name="url" placeholder="Insert URL"><br>
+
+                        <input type="submit" value="Short!">
+                    </form>
+                </td>
+            </tr>
+
+        </table>
+
+        <div id="msg">
+            <h5>{{ msg }}</h5>
+        </div>
+
+    </div>
+
+</body>
+</html>

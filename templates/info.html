@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smally URL shortener</title>
+
+    <style>
+        a {
+            display: block;
+            text-decoration: none;
+        }
+        #msg {
+            margin-left: auto;
+            margin-right: auto;
+            color: blue;
+        }
+        table {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        td {
+            text-align: center;
+        }
+
+        tr h1 {
+            text-align: center;
+        }
+
+        .container {
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        {% if link != None %}
+            <table>
+                <tr><td><h1>Info on ID: {{ link['id'] }}</h1></td></tr>
+                    <tr>
+                        <td>
+                            <a href="{{ link['url'] }}">Visit link</a>
+                        </td>
+
+                        <td>
+                            Times visited: {{ link['count'] }}
+                        </td>
+                    </tr>
+            </table>
+        {% endif %}
+
+        <div id="msg">
+            <h5>{{ msg }}</h5>
+        </div>
+
+
+        <a href="/">Back</a>
+    </div>
+
+</body>
+</html>
